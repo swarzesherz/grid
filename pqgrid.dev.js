@@ -807,7 +807,7 @@ fnSB._setOptions=function(){
         buffer.push("<tr pq-row-indx='" + rowIndx + "' class='" + row_cls + "' >");
         if (that.numberCell) {
             buffer.push("<td style='width:" + that.numberCellWidth + "px;' class='pq-grid-number-cell ui-state-default'>\
-		<div class='pq-td-div'>" + ((objP) ? "&nbsp;" : (rowIndx + 1)) + "</div></td>"); 
+		<div class='pq-td-div'>" + ((objP) ? "&nbsp;" : ((rowIndx + 1) + (that.dataModel.curPage-1) * that.dataModel.rPP)) + "</div></td>"); 
         }
         for (var col = 0; col < noColumns; col++) {
             var column = thisColModel[col],
